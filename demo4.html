@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5分钟了解网格布局</title>
+    <style>
+        body {
+            min-width: 550px;
+        }
+
+        .wrapper {
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px;
+        }
+
+        .bg-color1 {
+            background-color: lightblue;
+        }
+
+        .bg-color2 {
+            background-color: orange;
+        }
+
+        .bg-color3 {
+            background-color: lightskyblue;
+        }
+
+        .bg-color4 {
+            background-color: lightseagreen;
+        }
+
+        .bg-color5 {
+            background-color: lightcoral;
+        }
+
+        .bg-color6 {
+            background-color: lightgray;
+        }
+
+        .item1 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        .item3 {
+            grid-row-start: 2;
+            grid-row-end: 4
+        }
+
+        .item4 {
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="bg-color1 item1">1</div>
+    <div class="bg-color2 item2">2</div>
+    <div class="bg-color3 item3">3</div>
+    <div class="bg-color4 item4">4</div>
+    <div class="bg-color5 item5">5</div>
+    <div class="bg-color6 item6">6</div>
+</div>
+</body>
+</html>

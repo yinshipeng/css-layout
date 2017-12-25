@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>inline-block布局</title>
+    <style>
+        body {
+            min-width: 550px;
+        }
+
+        .main {
+            font-size: 0;
+            padding: 0 200px;
+        }
+
+        .left, .center, .right {
+            height: 400px;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+        .left, .right {
+            width: 200px;
+        }
+
+        .left {
+            background-color: lightblue;
+            margin-left: -200px;
+        }
+
+        .right {
+            background-color: orange;
+            margin-right: -200px;
+        }
+
+        .center {
+            background-color: #e9e9e9;
+            width: 100%;
+        }
+
+        .header, .footer {
+            height: 90px;
+            background-color: #c9c9c9;
+        }
+    </style>
+</head>
+<body>
+<div class="header">#header</div>
+<div class="main">
+    <div class="left">#left</div>
+    <div class="center">#center</div>
+    <div class="right">#right</div>
+</div>
+<div class="footer">#footer</div>
+</body>
+</html>

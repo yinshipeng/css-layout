@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绝对定位布局</title>
+    <style>
+        body {
+            min-width: 550px;
+        }
+
+        .container {
+            padding: 0 200px;
+            position: relative;
+        }
+
+        .left, .center, .right {
+            height: 400px;
+        }
+
+        .center {
+            background-color: #e9e9e9;
+            width: 100%;
+        }
+
+        .left, .right {
+            width: 200px;
+            position: absolute;
+            top: 0;
+        }
+
+        .left {
+            background-color: lightblue;
+            left: 0;
+        }
+
+        .right {
+            background-color: orange;
+            right: 0;
+        }
+
+        .header, .footer {
+            background-color: #c9c9c9;
+            height: 90px;
+        }
+    </style>
+</head>
+<body>
+<div class="header">#header</div>
+
+<div class="container">
+    <div class="center">#center</div>
+    <div class="left">#left</div>
+    <div class="right">#right</div>
+</div>
+
+<div class="footer">#footer</div>
+</body>
+</html>
