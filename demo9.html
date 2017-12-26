@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS中的水平、垂直居中</title>
+    <style>
+        /*--------------------------水平居中-----------------------------------*/
+
+        /* 方案1  text-center: center 设置块级元素内文本的水平对齐方式*/
+        .text {
+            text-align: center;
+        }
+
+        /* 方案2 设置宽度，使自身水中居中*/
+        .margin-auto {
+            width: 960px;
+            margin: 0 auto;
+        }
+
+        /* 方案3 绝对定位，根据尺寸模拟水平居中*/
+        .position-center {
+            position: absolute;
+            left: 50%;
+            margin-left: calc(-196px/2)
+
+        }
+
+        /* 方案4 flex布局属性*/
+        .flex-center {
+            margin-top: 60px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* 方案5 CSS3新属性，结合margin: auto;*/
+        .fit-content {
+            width: fit-content;
+            margin: auto;
+        }
+
+        /*其他display:table-cell; display: inline-block方法，都是将元素性质改变，然后结合上面👆几种方法达到居中的效果*/
+
+
+        /*--------------------------垂直居中-----------------------------------*/
+
+        /* 方案1 height和line-height一起使用*/
+        .line-height {
+            height: 50px;
+            line-height: 50px;
+        }
+
+        /* 方案2 设置等高内边距 */
+        .padding {
+            padding: 30px 0;
+        }
+
+        /* 方案3  align-items属性 */
+        .align-items {
+            display: flex;
+            align-items: center;
+            height: 50px;
+        }
+
+        /* 方案4  已知高度，模拟居中 */
+        .parent-height {
+            height: 50px;
+            position: relative;
+        }
+        .span-center {
+            position: absolute;
+            top: 50%;
+            margin-top: calc(-22px/2);
+        }
+
+        div {
+            margin: 20px 0;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+
+<!--水平居中-->
+
+<div class="text">text-align水平居中</div>
+<div class="margin-auto">margin auto水平居中</div>
+<div class="position-center">position: absolute水平居中</div>
+<div class="flex-center">flex水平居中</div>
+<div class="fit-content">fit-content水平居中</div>
+
+<!--垂直居中-->
+
+<div class="line-height">line-height垂直居中</div>
+<div class="padding">padding垂直居中</div>
+<div class="align-items">flex垂直居中</div>
+<div class="parent-height">
+    <span class="span-center">position垂直居中</span>
+</div>
+
+<div style="height: 50px;">
+    <span style="vertical-align: middle;">垂直居中</span>
+</div>
+
+
+
+<!--水平垂直居中-->
+</body>
+</html>
